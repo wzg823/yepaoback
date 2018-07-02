@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 公共样式 -->
+	<link rel="stylesheet" href="../assets/css/common.css">
+	<!-- 通用组件样式 -->
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<!-- index样式 -->
+	<link rel="stylesheet" href="../assets/css/index.css">
+	<script src="../node_modules/vue/dist/vue.js"></script>
+	<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+	<script src="../assets/js/jquery-1.8.3.min.js"></script>
+	<!-- 引入组件 -->
+	<script src="../components/header-footer.js"></script>
+</head>
+<body>
+	<div class="big-view">
+		<div class="view-banner">
+			<!-- 顶部按钮列表 -->
+			<section id="main-btn-nav" class="clearfix">
+				<ul>
+					<li v-for='item in navList'>{{item.name}}</li>
+				</ul>
+				<div class="tips-swiper">
+					<span>fdafdsafdsfsdfadfdsafdsafdsafdsafdsafsdafsdafsad</span>
+					<span>fdafdsafdsfsdfadfdsafdsafdsafdsafdsafsdafsdafsad</span>
+					<span>fdafdsafdsfsdfadfdsafdsafdsafdsafdsafsdafsdafsad</span>
+				</div>
+			</section>
+			<!-- 顶部课程及人数提醒 -->
+			<section id="main-course-tips" class="clearfix">
+				<ul>
+					<li v-for='item in tipsList'>
+						<span>{{item.tit}}</span>
+						<h3>{{item.num}}</h3>
+					</li>
+				</ul>
+			</section>
+			<!-- 入场相关 -->
+			<section id="admission">
+				<div class="adm-c clearfix">
+					<div class="adm-c-top clearfix">
+						<div class="adm-c-top-left">
+							<p>入场设置提醒</p>
+							<div class="adm-input-box">
+								<div class="adm-input">
+									<input type="text" placeholder="刷卡/扫码/手机号/会员卡号/名字/单次卡">
+									<button>入场</button>
+								</div>
+								<div class="back-input">
+									<input type="text" placeholder="输入手牌号">
+									<button>回车归还手牌号</button>
+								</div>
+							</div>
+						</div>
+						<div class="adm-c-top-right">
+							<p>
+								临时更衣柜
+								<span></span>
+								<span></span>
+							</p>
+							<div class="clothesCase-Item clearfix">
+								<span>入场99人</span>		
+								<img src="" alt="">
+								<span class="gender">男</span>
+								<div><div style="width: 30%"></div></div>
+								<span>30/150</span>
+							</div>
+							<div class="clothesCase-Item clearfix">
+								<span>入场50人</span>		
+								<img src="" alt="">
+								<span class="gender">女</span>
+								<div><div style="width: 25%"></div></div>
+								<span>50/200</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="adm-c-bottom">
+					<span>已借出手牌</span>
+					<ul class="clearfix">
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+						<li>
+							111
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- 引入公共的头部和底部 -->
+	<div id="headerFooter">
+		<header-footer></header-footer>
+	</div>
+
+
+<!-- 	<header>
+		<div class="header-main">
+			<img src="../assets/images/card_logo.png" alt="" class="header-logo">
+			<div class="header-btn-nav">
+				<ul>
+					<li>
+						<img src="../assets/images/my.png" alt="">
+						<span>入场与操课</span>
+					</li>
+					<li>
+						<img src="../assets/images/my.png" alt="">
+						<span>私教上课</span>
+					</li>
+					<li>
+						<img src="../assets/images/my.png" alt="">
+						<span>收银台</span>
+					</li>
+					<li>
+						<img src="../assets/images/my.png" alt="">
+						<span>营销平台</span>
+					</li>
+				</ul>
+			</div>
+			<div class="header-outIn">
+				<img src="../assets/images/share.png" alt="">
+				<span>退出登陆</span>
+			</div>
+			<div class="header-account">
+				<img src="../assets/images/my.png" alt="">
+				<div>
+					<span>欢迎您：</span>
+					<span>dafdasfdsafsda123213</span>
+				</div>
+				<img src="" alt="">
+			</div>
+		</div>
+	</header>
+	<footer>
+		<div class='footer-main'>
+			<div class="footer-left">
+				<p>青铜体育健身可以有限公司 ALL rights reserved</p>
+				<p>地址：武汉市汉江区万里广场A2单元706室&nbsp;&nbsp;&nbsp;&nbsp;联系电话：027-8672 5341&nbsp;&nbsp;&nbsp;&nbsp;额ICP证150121号</p>
+			</div>
+			<div class="footer-right">
+				<div>
+					<img src="../assets/images/default_headimg.png" alt="">
+					<span>微信公众号</span>
+				</div>
+				<div>
+					<img src="../assets/images/default_headimg.png" alt="">
+					<span>小程序</span>
+				</div>
+			</div>
+		</div>
+	</footer> -->
+</body>
+<script src="../assets/js/index.js"></script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../assets/css/index.css">
+	<script src="../node_modules/vue/dist/vue.js"></script>
+	<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+	<script src="../components/foo.js"></script>
+	<script src="../components/bar.js"></script>
+	<script src="../components/header.js"></script>
+	<script src="../assets/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<div id="test">321</div>
+	<div id="app">
+  		<h1 id="hhh">Hello App!</h1>
+  		<p>
+    		<router-link to="/foo">Go to Foo</router-link>
+    		<router-link to="/bar">Go to Bar</router-link>
+  		</p>
+  	<router-view></router-view>
+  	<div id="main">
+        <my-header></my-header>
+    </div>
+</div>
+</body>
+<script>
+
+
+
+	//定义路由组件
+	const Foo = { template:fooTemplate }
+	const Bar = { template:barTemplate }
+	//定义路由
+	const routes = [
+		{ 
+			path:'/foo',
+			component:Foo
+		},
+		{
+			path:'/bar',
+			component:Bar
+		}
+	]
+	//创建router实例
+	const router = new VueRouter({
+		routes
+	})
+	//创建和挂载根实例
+	const app = new Vue({
+		router
+	}).$mount('#app')
+
+	new Vue({
+        el: '#main'
+    })
+
+</script>
+</html>

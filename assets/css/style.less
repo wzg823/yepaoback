@@ -1,0 +1,163 @@
+body{
+	font-family: '微软雅黑';
+	padding-top: 90px;
+}
+.test{
+	width: 100%;
+	height: 1200px;
+}
+header{
+	width: 100%;
+	height: 90px;
+	background-color: #475778;
+	position: fixed;
+	top: 0;
+	left: 0;
+	.header-main{
+		width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+		.header-logo{
+			height: 60px;
+			margin-top: 15px;
+			float: left;
+			cursor: pointer;
+		}
+		.header-btn-nav{
+			float: left;
+			ul{
+				li{
+					width: 90px;
+					height: 64px;
+					margin-top: 13px;
+					float: left;
+					display: flex;
+					flex-direction: column;
+					background-color: #5B6E95;
+					border-radius: 4px;
+					margin-right: 20px;
+					cursor: pointer;
+					img{
+						width: 25px;
+						height: 25px;
+						display: block;
+						margin: 8px auto;
+					}
+					span{
+						display: block;
+						width: 100%;
+						text-align: center;
+						font-size: 14px;
+						color: #fff;
+					}
+				}
+			}
+		}
+		.header-outIn{
+			float: right;
+			width: 90px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			border-left: 2px solid #667594;
+			border-right: 2px solid #667594;
+			cursor: pointer;
+			img{
+				display: block;
+				margin: 15px auto;
+				width: 30px;
+				height: 30px;
+			}
+			span{
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-size: 14px;
+				color: #fff;
+			}
+		}
+		.header-account{
+			float: right;
+			margin-top: 24px;
+			width: 250px;
+			position: relative;
+			>img:nth-child(1){
+				width: 38px;
+				height: 38px;
+				border-radius: 38px;
+				border: 1px solid #fff;
+				float: left;
+				margin-right: 10px;
+			}
+			div{
+				display: flex;
+				flex-direction: column;
+				font-size: 14px;
+				margin-left: 10px;
+				span:nth-child(1){
+					color: #AACAFF;
+					margin-top: 2px;
+				}
+				span:nth-child(2){
+					color: #fff;
+					margin-top: 8px;
+					max-width: 150px;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+				}
+			}
+			img:nth-child(3){
+				width: 24px;
+				height: 24px;
+				border: 1px solid #fff;
+				display: block;
+				position: absolute;
+				right: 20px;
+				top: 10px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+footer{
+	width: 100%;
+	height: 120px;
+	background-color: #F2F2F2;
+	.footer-main{
+		width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+		.footer-left{	
+			float: left;	
+			width: 80%;
+			margin-top: 35px;
+			>p{
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+		}
+		.footer-right{	
+			float: right;
+			width: 20%;
+			>div{
+				float: right;
+				display: flex;
+				flex-direction: column;
+				margin-right: 15px;
+				margin-top: 15px;
+				img{
+					display: block;
+					width: 75px;
+					height: 75px;
+				}
+				span{
+					display: block;
+					width: 75px;
+					text-align: center;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
