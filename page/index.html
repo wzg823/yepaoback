@@ -9,8 +9,11 @@
 	<link rel="stylesheet" href="../assets/css/style.css">
 	<!-- index样式 -->
 	<link rel="stylesheet" href="../assets/css/index.css">
+	<!-- layer -->
+	<link rel="stylesheet" href="../node_modules/layui/css/layui.css">
 	<script src="../node_modules/vue/dist/vue.js"></script>
 	<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+	<script src="../node_modules/layui/layui.js"></script>
 	<script src="../assets/js/jquery-1.8.3.min.js"></script>
 	<!-- 引入组件 -->
 	<script src="../components/header-footer.js"></script>
@@ -84,112 +87,327 @@
 						<li>
 							111
 						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
-						<li>
-							111
-						</li>
 					</ul>
+				</div>
+			</section>
+			<!-- 今日课程安排 -->
+			<section id="course-arrange">
+				<div class="course-arrange-tit">
+					<h3>今日课程安排</h3>
+					<p>今日操课：<span>8节</span></p>
+					<p>今日预约：<span>40人</span></p>
+					<p>本月以上课人数：<span>600人</span></p>
+					<p>本月操课：<span>100节</span></p>
+					<button>本月操课表</button>
+					<button>课程播报设置</button>
+				</div>
+				<div class="course-arrange-table">
+					<div class="table-tit">操课教练上课前台签到，课程结束后手机上签课或前台手动签课，点击教练可手动签课，只有课程开始前10分钟教练手机才能签开始，点击课程可进行编辑</div>
+					<div class="table-con">
+						<table class="layui-table" lay-even>
+							<!-- 控制每列宽度 -->
+							<colgroup>
+    							<col width="100">
+    							<col width="160">
+  							</colgroup>
+  							<thead>
+  								<tr>
+  									<th>教室名称</th>
+  									<th>时间</th>
+  									<th>课程</th>
+  									<th>预约人数</th>
+  									<th>上课教练</th>
+  									<th>状态</th>
+  									<th>教练签到</th>
+  									<th>前台确定下课</th>
+  									<th>编辑</th>
+  								</tr>
+  							</thead>
+  							<tr>
+  								<td>瑜伽厅</td>
+  								<td>2018-04-20 19:30</td>
+  								<td>瑜伽健身</td>
+  								<td>999/999</td>
+  								<td>陈少华</td>
+  								<td>未开始</td>
+  								<td>未签到</td>
+  								<td>未确定</td>
+  								<td>
+  									<a href="">预约</a>/<a href="">修改</a>
+  								</td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+						</table>
+					</div>
+				</div>
+			</section>
+			<section id="admission-member">
+				<div class="admission-member-tit">
+					<h3>已入场会员</h3>
+					<div class="table-search">
+						<input type="text" >
+						<input type="button" value="搜索">
+					</div>
+					<p>入场：<span>20人</span></p>
+					<p>出场：<span>40人</span></p>
+					<button>清场</button>
+				</div>
+				<div class="admission-member-table">
+					<div class="table-con">
+						<table class="layui-table">
+							<!-- 控制每列宽度 -->
+							<colgroup>
+    							<col width="140">
+    							<col width="200">
+    							<col width="360">
+    							<col width="160">
+    							<col width="160">
+  							</colgroup>
+							<thead>
+								<tr>
+									<th>会员姓名/图像</th>
+									<th>会员信息</th>
+									<th>使用卡信息</th>
+									<th>入场/出场时间</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</section>
 		</div>
@@ -198,63 +416,6 @@
 	<div id="headerFooter">
 		<header-footer></header-footer>
 	</div>
-
-
-<!-- 	<header>
-		<div class="header-main">
-			<img src="../assets/images/card_logo.png" alt="" class="header-logo">
-			<div class="header-btn-nav">
-				<ul>
-					<li>
-						<img src="../assets/images/my.png" alt="">
-						<span>入场与操课</span>
-					</li>
-					<li>
-						<img src="../assets/images/my.png" alt="">
-						<span>私教上课</span>
-					</li>
-					<li>
-						<img src="../assets/images/my.png" alt="">
-						<span>收银台</span>
-					</li>
-					<li>
-						<img src="../assets/images/my.png" alt="">
-						<span>营销平台</span>
-					</li>
-				</ul>
-			</div>
-			<div class="header-outIn">
-				<img src="../assets/images/share.png" alt="">
-				<span>退出登陆</span>
-			</div>
-			<div class="header-account">
-				<img src="../assets/images/my.png" alt="">
-				<div>
-					<span>欢迎您：</span>
-					<span>dafdasfdsafsda123213</span>
-				</div>
-				<img src="" alt="">
-			</div>
-		</div>
-	</header>
-	<footer>
-		<div class='footer-main'>
-			<div class="footer-left">
-				<p>青铜体育健身可以有限公司 ALL rights reserved</p>
-				<p>地址：武汉市汉江区万里广场A2单元706室&nbsp;&nbsp;&nbsp;&nbsp;联系电话：027-8672 5341&nbsp;&nbsp;&nbsp;&nbsp;额ICP证150121号</p>
-			</div>
-			<div class="footer-right">
-				<div>
-					<img src="../assets/images/default_headimg.png" alt="">
-					<span>微信公众号</span>
-				</div>
-				<div>
-					<img src="../assets/images/default_headimg.png" alt="">
-					<span>小程序</span>
-				</div>
-			</div>
-		</div>
-	</footer> -->
 </body>
 <script src="../assets/js/index.js"></script>
 </html>
