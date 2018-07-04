@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 公共样式 -->
+	<link rel="stylesheet" href="../../assets/css/common.css">
+	<!-- 通用组件样式 -->
+	<link rel="stylesheet" href="../../assets/css/style.css">
+	<!-- index样式 -->
+	<link rel="stylesheet" href="../../assets/css/index.css">
+	<!-- layer -->
+	<link rel="stylesheet" href="../../node_modules/layui/css/layui.css">
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../node_modules/swiper/swiper-3.4.2.min.css">
+	<script src="../../node_modules/vue/dist/vue.js"></script>
+	<script src="../../node_modules/vue-router/dist/vue-router.js"></script>
+	<script src="../../node_modules/layui/layui.js"></script>
+	<script src="../../assets/js/jquery-1.8.3.min.js"></script>
+	<script src="../../node_modules/swiper/swiper-3.4.2.jquery.min.js"></script>
+	<!-- 引入组件 -->
+	<script src="../../components/header-footer.js"></script>
+	<script src="../../components/alert-900.js"></script>
+</head>
+<body>
+	<div class="big-view">
+		<div class="view-banner">
+			<!-- 顶部按钮列表 -->
+			<section id="main-btn-nav" class="clearfix">
+				<ul>
+					<li v-for='item in navList'>{{item.name}}</li>
+				</ul>
+				<div class="tips-swiper swiper-container" id='tips'>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">fdafdsafdsfsdfadfdsafdsafdsafdsafdsafsdafsdafsad</div>
+						<div class="swiper-slide">fdafdsafdsfsdfadfdsafdsafdsafdsafdsafsdafsdafsad</div>
+						<div class="swiper-slide">fdafdsafdsfsdfadfdsafdsafdsafdsafdsafsdafsdafsad</div>
+					</div>	
+				</div>
+				<div class="priCourse-confirm">
+					<a href="">私教消课确认<span>99</span></a>
+				</div>
+				<div class="priCourse-confirm-alert">
+					<alert-900></alert-900>
+					<div class="priCourse-confirm-con">
+						
+					</div>
+				</div>
+			</section>
+			<!-- 顶部课程及人数提醒 -->
+			<section id="main-course-tips" class="clearfix">
+				<ul>
+					<li v-for='item in tipsList'>
+						<span>{{item.tit}}</span>
+						<h3>{{item.num}}</h3>
+					</li>
+				</ul>
+			</section>
+			<!-- 入场相关 -->
+			<section id="admission">
+				<div class="adm-c clearfix">
+					<div class="adm-c-top clearfix">
+						<div class="adm-c-top-left">
+							<p>入场设置提醒</p>
+							<div class="adm-input-box">
+								<div class="adm-input">
+									<input type="text" placeholder="刷卡/扫码/手机号/会员卡号/名字/单次卡">
+									<button>入场</button>
+								</div>
+								<div class="back-input">
+									<input type="text" placeholder="输入手牌号">
+									<button>回车归还手牌号</button>
+								</div>
+							</div>
+						</div>
+						<div class="adm-c-top-right">
+							<p>
+								临时更衣柜
+								<span></span>
+								<span></span>
+							</p>
+							<button class="clothesCase-setting">添加设置更衣柜</button>
+							<div class="clothesCase-Item clearfix">
+								<span>入场99人</span>		
+								<img src="" alt="">
+								<span class="gender">男</span>
+								<div><div style="width: 30%"></div></div>
+								<span>30/150</span>
+							</div>
+							<div class="clothesCase-Item clearfix">
+								<span>入场50人</span>		
+								<img src="" alt="">
+								<span class="gender">女</span>
+								<div><div style="width: 25%"></div></div>
+								<span>50/200</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="adm-c-bottom">
+					<span>已借出手牌</span>
+					<ul class="clearfix">
+						<li>
+							111
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- 今日课程安排 -->
+			<section id="course-arrange">
+				<div class="course-arrange-tit">
+					<h3>今日课程安排</h3>
+					<p>今日操课：<span>8节</span></p>
+					<p>今日预约：<span>40人</span></p>
+					<p>本月以上课人数：<span>600人</span></p>
+					<p>本月操课：<span>100节</span></p>
+					<button>本月操课表</button>
+					<button>课程播报设置</button>
+				</div>
+				<div class="course-arrange-table">
+					<div class="table-tit">操课教练上课前台签到，课程结束后手机上签课或前台手动签课，点击教练可手动签课，只有课程开始前10分钟教练手机才能签开始，点击课程可进行编辑</div>
+					<div class="table-con">
+						<table class="layui-table" lay-even>
+							<!-- 控制每列宽度 -->
+							<colgroup>
+    							<col width="100">
+    							<col width="160">
+  							</colgroup>
+  							<thead>
+  								<tr>
+  									<th>教室名称</th>
+  									<th>时间</th>
+  									<th>课程</th>
+  									<th>预约人数</th>
+  									<th>上课教练</th>
+  									<th>状态</th>
+  									<th>教练签到</th>
+  									<th>前台确定下课</th>
+  									<th>编辑</th>
+  								</tr>
+  							</thead>
+  							<tr>
+  								<td>瑜伽厅</td>
+  								<td>2018-04-20 19:30</td>
+  								<td>瑜伽健身</td>
+  								<td>999/999</td>
+  								<td>陈少华</td>
+  								<td>未开始</td>
+  								<td>未签到</td>
+  								<td>未确定</td>
+  								<td>
+  									<a href="">预约</a>/<a href="">修改</a>
+  								</td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+  							<tr>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  								<td></td>
+  							</tr>
+						</table>
+					</div>
+				</div>
+			</section>
+			<section id="admission-member">
+				<div class="admission-member-tit">
+					<h3>已入场会员</h3>
+					<div class="table-search">
+						<input type="text" >
+						<input type="button" value="搜索">
+					</div>
+					<p>入场：<span>20人</span></p>
+					<p>出场：<span>40人</span></p>
+					<button>清场</button>
+				</div>
+				<div class="admission-member-table">
+					<div class="table-con">
+						<table class="layui-table">
+							<!-- 控制每列宽度 -->
+							<colgroup>
+    							<col width="140">
+    							<col width="200">
+    							<col width="360">
+    							<col width="160">
+    							<col width="160">
+  							</colgroup>
+							<thead>
+								<tr>
+									<th>会员姓名/图像</th>
+									<th>会员信息</th>
+									<th>使用卡信息</th>
+									<th>入场/出场时间</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+								<tr>
+									<td rowspan="2"> 
+										<img src="" alt="">
+										<span>张学友</span>
+									</td>
+									<td rowspan="2">
+										<div>
+											<span>会员卡号：ED28321</span>
+											<img src="" alt="">
+										</div>
+										<div>	
+											<img src="" alt="">
+											<span>17807125847</span>
+										</div>
+									</td>
+									<td rowspan="2">	
+										预售年卡：2018-12-01 剩余：<span>120天</span>
+										<br>
+										肩颈康复私教：<span>20/30节</span>
+									</td>
+									<td style="text-align: center;">
+										入场：<span>1/24-10:30</span>
+									</td>
+									<td style="text-align: center;">22归还手牌</td>
+								</tr>
+								<tr>
+									<td style="text-align: center;">入场：-- --</td>
+									<td style="text-align: center;"><a href="">更多操作</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- 引入公共的头部和底部 -->
+	<div id="headerFooter">
+		<header-footer name='waaaa'></header-footer>
+	</div>
+</body>
+<script src="../../assets/js/index.js"></script>
+</html>

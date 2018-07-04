@@ -76,3 +76,17 @@ new Vue({
 		]	
 	}
 })
+//首页提醒
+$(document).ready(function () {
+ 	var mySwiper = new Swiper ('#tips',{
+    	direction: 'vertical',
+    	autoplay : 1000,
+    	autoplayDisableOnInteraction : false,
+    	loop: true,
+    	freeMode : true,
+  	})        
+})
+//公共弹窗900px实例
+new Vue({
+	el:'.priCourse-confirm-alert'
+})

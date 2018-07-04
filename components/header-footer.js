@@ -3,38 +3,34 @@ var headerFooterTemplate = `
 <div>
 	<header>
 		<div class="header-main">
-			<img @click='naveTo' src="../assets/images/card_logo.png" alt="" class="header-logo">
+			<img @click='naveTo' src="../../assets/images/card_logo.png" alt="" class="header-logo">
 			<div class="header-btn-nav">
 				<ul>
 					<li>
-						<img src="../assets/images/my.png" alt="">
+						<img src="../../assets/images/健身_选中.png" alt="">
 						<span>入场与操课</span>
 					</li>
 					<li>
-						<img src="../assets/images/my.png" alt="">
+						<img src="../../assets/images/健身教练.png" alt="">
 						<span>私教上课</span>
 					</li>
 					<li>
-						<img src="../assets/images/my.png" alt="">
+						<img src="../../assets/images/收银台.png" alt="">
 						<span>收银台</span>
 					</li>
 					<li>
-						<img src="../assets/images/my.png" alt="">
+						<img src="../../assets/images/营销平台.png" alt="">
 						<span>营销平台</span>
 					</li>
 				</ul>
 			</div>
-			<div class="header-outIn">
-				<img src="../assets/images/share.png" alt="">
-				<span>退出登陆</span>
-			</div>
 			<div class="header-account">
-				<img src="../assets/images/my.png" alt="">
+				<img src="../../assets/images/hito.png" alt="">
 				<div>
-					<span>欢迎您：</span>
-					<span>dafdasfdsafsda123213</span>
+					<span>下午好，{{name}}：</span>
+					<span>青铜—武汉</span>
 				</div>
-				<img src="" alt="">
+				<img src="../../assets/images/more.png" alt="">
 			</div>
 		</div>
 	</header>
@@ -46,11 +42,11 @@ var headerFooterTemplate = `
 			</div>
 			<div class="footer-right">
 				<div>
-					<img src="../assets/images/default_headimg.png" alt="">
+					<img src="../../assets/images/default_headimg.png" alt="">
 					<span>微信公众号</span>
 				</div>
 				<div>
-					<img src="../assets/images/default_headimg.png" alt="">
+					<img src="../../assets/images/default_headimg.png" alt="">
 					<span>小程序</span>
 				</div>
 			</div>
@@ -60,6 +56,7 @@ var headerFooterTemplate = `
 `
 
 Vue.component('header-footer', {
+	props:['name'],
     template: headerFooterTemplate,
     data(){
     	return {}
