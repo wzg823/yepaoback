@@ -2,26 +2,35 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>新入会</title>
 	<!-- 公共样式 -->
 	<link rel="stylesheet" href="../../assets/css/common.css">
-	<!-- 通用组件样式 -->
 	<link rel="stylesheet" href="../../assets/css/style.css">
-	<!-- index样式 -->
-	<link rel="stylesheet" href="../../assets/css/index.css">
+	<!-- 当前页样式 -->
+	<link rel="stylesheet" href="../../assets/css/newMember.css">
 	<!-- layer -->
 	<link rel="stylesheet" href="../../node_modules/layui/css/layui.css">
+	<!-- 框架及插件 -->
 	<script src="../../node_modules/vue/dist/vue.js"></script>
 	<script src="../../node_modules/vue-router/dist/vue-router.js"></script>
-	<script src="../../assets/js/jquery-1.8.3.min.js"></script>
-	<!-- 引入组件 -->
+	<script src="../../node_modules/jquery/jquery-1.8.3.min.js"></script>
+	<!-- components -->
 	<script src="../../components/header-footer.js"></script>
+	<script src="../../components/main-btn-nav.js"></script>
 </head>
 <body>
+	<div class="big-view">
+		<div class="view-banner">
+			<section id="main-btn-nav" class="clearfix">
+				<main-btn-nav :btn-list='btnList'></main-btn-nav>
+			</section>
+		</div>
+	</div>
 	<!-- 引入公共的头部和底部 -->
 	<div id="headerFooter">
-		<header-footer name='wzg823'></header-footer>
+		<header-footer></header-footer>
 	</div>
 </body>
+<script src="../../assets/js/common.js"></script>
 <script src="../../assets/js/newMember.js"></script>
 </html>

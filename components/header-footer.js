@@ -7,27 +7,35 @@ var headerFooterTemplate = `
 			<div class="header-btn-nav">
 				<ul>
 					<li>
+						<a>
 						<img src="../../assets/images/健身_选中.png" alt="">
 						<span>入场与操课</span>
+						</a>
 					</li>
 					<li>
+						<a>
 						<img src="../../assets/images/健身教练.png" alt="">
 						<span>私教上课</span>
+						</a>
 					</li>
 					<li>
+						<a href="../cashier/newMember.html">
 						<img src="../../assets/images/收银台.png" alt="">
 						<span>收银台</span>
+						</a>
 					</li>
 					<li>
+						<a>
 						<img src="../../assets/images/营销平台.png" alt="">
 						<span>营销平台</span>
+						</a>
 					</li>
 				</ul>
 			</div>
 			<div class="header-account">
 				<img src="../../assets/images/hito.png" alt="">
 				<div>
-					<span>下午好，{{name}}：</span>
+					<span>下午好，admin：</span>
 					<span>青铜—武汉</span>
 				</div>
 				<img src="../../assets/images/more.png" alt="">
@@ -56,7 +64,7 @@ var headerFooterTemplate = `
 `
 
 Vue.component('header-footer', {
-	props:['name'],
+	props:[],
     template: headerFooterTemplate,
     data(){
     	return {}

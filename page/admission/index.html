@@ -5,31 +5,30 @@
 	<title>Document</title>
 	<!-- 公共样式 -->
 	<link rel="stylesheet" href="../../assets/css/common.css">
-	<!-- 通用组件样式 -->
 	<link rel="stylesheet" href="../../assets/css/style.css">
-	<!-- index样式 -->
+	<!-- 当前样式 -->
 	<link rel="stylesheet" href="../../assets/css/index.css">
 	<!-- layer -->
 	<link rel="stylesheet" href="../../node_modules/layui/css/layui.css">
 	<!-- swiper -->
 	<link rel="stylesheet" href="../../node_modules/swiper/swiper-3.4.2.min.css">
+	<!-- 框架及插件 -->
 	<script src="../../node_modules/vue/dist/vue.js"></script>
 	<script src="../../node_modules/vue-router/dist/vue-router.js"></script>
 	<script src="../../node_modules/layui/layui.js"></script>
-	<script src="../../assets/js/jquery-1.8.3.min.js"></script>
+	<script src="../../node_modules/jquery/jquery-1.8.3.min.js"></script>
 	<script src="../../node_modules/swiper/swiper-3.4.2.jquery.min.js"></script>
-	<!-- 引入组件 -->
+	<!-- components -->
 	<script src="../../components/header-footer.js"></script>
 	<script src="../../components/alert-900.js"></script>
+	<script src="../../components/main-btn-nav.js"></script>
 </head>
 <body>
 	<div class="big-view">
 		<div class="view-banner">
 			<!-- 顶部按钮列表 -->
 			<section id="main-btn-nav" class="clearfix">
-				<ul>
-					<li v-for='item in navList'>{{item.name}}</li>
-				</ul>
+				<main-btn-nav :btn-list='btnList'></main-btn-nav>
 				<div class="tips-swiper swiper-container" id='tips'>
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">fdafdsafdsfsdfadfdsafdsafdsafdsafdsafsdafsdafsad</div>
@@ -40,12 +39,12 @@
 				<div class="priCourse-confirm">
 					<a href="">私教消课确认<span>99</span></a>
 				</div>
-				<div class="priCourse-confirm-alert">
+<!-- 				<div class="priCourse-confirm-alert">
 					<alert-900></alert-900>
 					<div class="priCourse-confirm-con">
 						
 					</div>
-				</div>
+				</div> -->
 			</section>
 			<!-- 顶部课程及人数提醒 -->
 			<section id="main-course-tips" class="clearfix">
@@ -430,8 +429,9 @@
 	</div>
 	<!-- 引入公共的头部和底部 -->
 	<div id="headerFooter">
-		<header-footer name='waaaa'></header-footer>
+		<header-footer></header-footer>
 	</div>
 </body>
+<script src="../../assets/js/common.js"></script>
 <script src="../../assets/js/index.js"></script>
 </html>

@@ -1,34 +1,36 @@
-//公共头部和底部实例
-new Vue({
-	el:'#headerFooter'
-})
-// 会员入场按钮行列表实例
+// 主按钮行列表
 new Vue({
 	el:'#main-btn-nav',
 	data:{
-		navList:[
+		btnList:[
 			{
 				name:'返回',
+				navagate:'123'
 			},
 			{
 				name:'会员入场',
+				navagate:'123'
 			},
 			{
 				name:'访客登记',
+				navagate:'123'
 			},
 			{
 				name:'出入场统计表',
+				navagate:'123'
 			},
 			{
 				name:'操课预约统计',
+				navagate:'123'
 			},
 			{
 				name:'操课上课统计',
-			}
+				navagate:'123'
+			}	
 		]
 	}
 })
-//课程及人数提醒实例
+//课程及人数提醒
 new Vue({
 	el:'#main-course-tips',
 	data:{
@@ -87,6 +89,6 @@ $(document).ready(function () {
   	})        
 })
 //公共弹窗900px实例
-new Vue({
-	el:'.priCourse-confirm-alert'
-})
+// new Vue({
+// 	el:'.priCourse-confirm-alert'
+// })
