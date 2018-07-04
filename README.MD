@@ -9,5 +9,6 @@
 ├── components               // 组件（js形式）
 ├── node_modules             // 引用的外部框架及插件
 ├── page                     // html页面文件存放目录
-
+│   ├── admission            // 入场
+│   └── cashier              // 收银台   
 ```

@@ -42,3 +42,8 @@ new Vue({
 		]
 	}
 })
+
+
+new Vue({
+	el:'#meminfo-fillin'
+})
